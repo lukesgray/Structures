@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
     struct sPerson *first = NULL;
     struct sPerson *added = NULL;
 
-    char command[64];
+    char *command = malloc(64);
     int age;
     int insert_person;
 
@@ -62,7 +62,6 @@ int main(int argc, char *argv[])
         }
         else if (strcmp("insert\n", command) == 0)
         {
-            printf("Adding %d\n", age);
             if (first == NULL)
             {
                 printf("Enter new person:\n");
